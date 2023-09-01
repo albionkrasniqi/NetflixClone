@@ -44,7 +44,7 @@ class CategoryController extends Controller
     public function update(UpdateConfigRequest $request, $id)
     {
         $category = Category::findOrFail($id);
-        
+
         $category->name = $request->name;
         $category->description = $request->description;
         $category->update();
